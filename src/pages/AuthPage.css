@@ -1,0 +1,38 @@
+.auth {
+  padding: 60px 0;
+}
+
+.auth__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth__media {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.auth__media img {
+  width: 100%;
+  height: auto;
+}
+
+.auth__auth {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.auth__title {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

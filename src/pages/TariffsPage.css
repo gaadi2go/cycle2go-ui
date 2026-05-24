@@ -1,0 +1,77 @@
+.tariffs {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bicycle-card {
+  margin-bottom: 16px;
+}
+
+.bicycle-card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px;
+}
+
+.bicycle-image {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.bicycle-card-details h4 {
+  margin: 0 0 4px;
+}
+
+.bicycle-card-details h5 {
+  margin: 0 0 8px;
+  color: #666;
+  font-weight: 400;
+}
+
+.divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 8px 0;
+}
+
+.tariff-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+
+.tariff-table th,
+.tariff-table td {
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.tariff-table th {
+  font-weight: 600;
+}
+
+.tariff-table td {
+  color: #666;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 600px) {
+  .bicycle-card-layout {
+    flex-direction: column;
+  }
+  .bicycle-image {
+    width: 100%;
+    max-width: 300px;
+  }
+}

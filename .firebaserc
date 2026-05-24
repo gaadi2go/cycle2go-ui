@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "gaadi2go-22",
+    "prod": "gaadi2go-22"
+  },
+  "targets": {
+    "gaadi2go-22": {
+      "hosting": {
+        "cycle2go": [
+          "cycle2go"
+        ]
+      }
+    }
+  }
+}

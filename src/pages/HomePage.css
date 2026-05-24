@@ -1,0 +1,68 @@
+.hero {
+  position: relative;
+  background: url('/images/home-hero-bg-1300x617.jpg') center center / cover no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__inner {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: center;
+}
+
+.tab-content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px;
+  margin: 5px;
+  border-radius: 8px;
+  background: white;
+}
+
+.steps {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.steps__inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.step__media {
+  margin-bottom: 20px;
+}
+
+.step__image {
+  max-width: 200px;
+  height: auto;
+}
+
+.landing__section {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
