@@ -1,10 +1,36 @@
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  --green-dark: #1b5e20;
+  --green-main: #2e7d32;
+  --green-mid: #4caf50;
+  --green-light: #a5d6a7;
+  --green-pale: #e8f5e9;
+  --amber: #ffad00;
+  --amber-dark: #e69500;
+  --text-dark: #1a2e1a;
+  --text-mid: #444;
+  --text-light: #888;
+  --bg-white: #ffffff;
+  --bg-light: #f7faf7;
+  --header-height: 64px;
+}
+
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-  color: #333;
-  background-color: #ffffff;
+  font-family: 'Poppins', 'Roboto', 'Helvetica Neue', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
@@ -13,8 +39,36 @@ body {
   flex-direction: column;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* ===== SCROLLBAR (Webkit) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a5d6a7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4caf50;
+}
+
+/* ===== UTILITY ===== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
