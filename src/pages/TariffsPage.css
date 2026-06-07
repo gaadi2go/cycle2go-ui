@@ -1,77 +1,339 @@
-.tariffs {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ===== TARIFFS PAGE ===== */
+.tariffs-page {
+  min-height: 80vh;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 80px;
 }
 
-.bicycle-card {
+/* ===== HEADER ===== */
+.tariffs-header {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  padding: 100px 24px 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.tariffs-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
   margin-bottom: 16px;
 }
 
-.bicycle-card-layout {
+.tariffs-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.tariffs-header p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* ===== SECTION BADGE (for loading state) ===== */
+.section-badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+/* ===== CONTAINER ===== */
+.tariffs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+
+/* ===== CYCLES GRID ===== */
+.cycles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+  gap: 24px;
+}
+
+/* ===== CYCLE CARD ===== */
+.cycle-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 16px;
+  flex-direction: column;
 }
 
-.bicycle-image {
-  width: 250px;
-  height: auto;
-  border-radius: 8px;
+.cycle-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  border-color: #a5d6a7;
+}
+
+/* ===== IMAGE ===== */
+.cycle-card__image-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.cycle-card__image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.35s ease;
 }
 
-.bicycle-card-details h4 {
+.cycle-card:hover .cycle-card__image {
+  transform: scale(1.04);
+}
+
+.cycle-card__category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(27, 94, 32, 0.88);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== BODY ===== */
+.cycle-card__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.cycle-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cycle-card__name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a2e1a;
   margin: 0 0 4px;
 }
 
-.bicycle-card-details h5 {
-  margin: 0 0 8px;
-  color: #666;
-  font-weight: 400;
-}
-
-.divider {
-  height: 1px;
-  background: #e0e0e0;
-  margin: 8px 0;
-}
-
-.tariff-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 8px 0;
-}
-
-.tariff-table th,
-.tariff-table td {
-  padding: 4px 8px;
-  text-align: center;
+.cycle-card__desc {
   font-size: 0.85rem;
+  color: #777;
+  margin: 0;
 }
 
-.tariff-table th {
-  font-weight: 600;
+.cycle-card__price-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
 }
 
-.tariff-table td {
-  color: #666;
+.price-from {
+  font-size: 0.72rem;
+  color: #aaa;
+  font-weight: 500;
 }
 
-.features {
+.price-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #2e7d32;
+  line-height: 1;
+}
+
+.price-unit {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ===== PRICING GRID ===== */
+.cycle-card__pricing {
+  background: #f8faf8;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.pricing-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+}
+
+.pricing-tier--best {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+}
+
+.tier-label {
+  font-size: 0.72rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.tier-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a2e1a;
+}
+
+.pricing-tier--best .tier-price {
+  color: #2e7d32;
+}
+
+.best-tag {
+  font-size: 0.62rem;
+  color: #2e7d32;
+  font-weight: 700;
+  background: #c8e6c9;
+  padding: 1px 6px;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+}
+
+/* ===== ACCESSORIES ===== */
+.cycle-card__accessories {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  font-size: 0.85rem;
+  gap: 6px;
 }
 
-@media screen and (max-width: 600px) {
-  .bicycle-card-layout {
-    flex-direction: column;
+/* ===== SELECT BUTTON ===== */
+.cycle-card__select-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: auto;
+}
+
+.cycle-card__select-btn:hover {
+  background: #1b5e20;
+  transform: translateY(-1px);
+}
+
+/* ===== BULK NOTE ===== */
+.tariffs-note {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.tariffs-note__icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.tariffs-note a {
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tariffs-note a:hover {
+  text-decoration: underline;
+}
+
+/* ===== EMPTY STATE ===== */
+.tariffs-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 24px;
+  text-align: center;
+  color: #888;
+}
+
+.tariffs-empty h3 {
+  font-size: 1.3rem;
+  color: #555;
+  margin: 0;
+}
+
+.tariffs-empty p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .cycles-grid {
+    grid-template-columns: 1fr;
   }
-  .bicycle-image {
-    width: 100%;
-    max-width: 300px;
+
+  .cycle-card__header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cycle-card__price-hero {
+    align-items: flex-start;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

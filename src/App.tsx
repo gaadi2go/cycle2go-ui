@@ -16,14 +16,57 @@ import ServicingPage from './pages/ServicingPage';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#3f51b5', // indigo
+      main: '#2e7d32',
+      light: '#4caf50',
+      dark: '#1b5e20',
     },
     secondary: {
-      main: '#ff4081', // pink
+      main: '#ffad00',
+      dark: '#e69500',
     },
   },
   typography: {
-    fontFamily: 'Roboto, "Helvetica Neue", sans-serif',
+    fontFamily: '"Poppins", "Roboto", "Helvetica Neue", sans-serif',
+    h1: { fontWeight: 700 },
+    h2: { fontWeight: 700 },
+    h3: { fontWeight: 600 },
+    h4: { fontWeight: 600 },
+    h5: { fontWeight: 600 },
+    h6: { fontWeight: 600 },
+    button: { fontWeight: 600, textTransform: 'none' as const },
+  },
+  shape: {
+    borderRadius: 12,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '8px',
+          padding: '10px 24px',
+          textTransform: 'none',
+          fontWeight: 600,
+          fontSize: '0.95rem',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: '16px',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontWeight: 600,
+          fontFamily: '"Poppins", sans-serif',
+        },
+      },
+    },
   },
 });
 
